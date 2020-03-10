@@ -39,7 +39,6 @@ select * from Arduino;
 
 create table Dados (
 idArduino int,
-idCliente int,
 horaData datetime,
 umidade varchar(6),
 temperatura varchar(4),
