@@ -1,6 +1,6 @@
 #include <dht.h> // Inclui a biblioteca do sensor DHT11
 dht DHT; // Inicializa o sensor com uma variavel DHT
-void setup()
+void setup() // Setup do programa
 {
     Serial.begin(9600); // Inicializa o Monitor Serial
 }
