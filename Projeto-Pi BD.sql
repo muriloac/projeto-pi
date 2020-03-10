@@ -46,10 +46,6 @@ temperatura varchar(4),
 FOREIGN KEY (idArduino) 
 REFERENCES Arduino(idArduino) 
 on update cascade
-on delete cascade,
-FOREIGN KEY (idCliente) 
-REFERENCES Arduino(idCliente) 
-on update cascade
 on delete cascade
 ) ENGINE = innodb;
 
