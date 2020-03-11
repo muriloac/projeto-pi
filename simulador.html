@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT" style="background-image: linear-gradient(90deg, #0398b9, #c471ed, #f64f59 );">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador financeiro</title>
+</head>
+
+<body>
+    <div style="display: flex;height:100vh;width:100%">
+        <div style="background-color: rgba(255,255,255,0.5);margin:auto;width:60%;height:70vh">
+            <h1 style="color: black;margin-left: 170px">Simulador financeiro - <i>Faunus</i></h1><br><br><br>
+    <span style="color: black;">Quanto a sua empresa produz em toneladas por dia:</span> <input type="number" id="V1" autofocus> <br><br>
+    <span style="color: black;">Quanto a sua empresa perde na produção:</span> <input type="number" id="V2"> <br><br>
+    <span style="color: black;">Quanto ela Lucra com essa produção diária:</span> <input type="number" id="V3"> <br><br>
+    <div id="Exibir" style="font-size: 20px;"></div><br>
+    <button onclick="calcular()" style="color:white; background-color: black; height: 25px;margin-left:35%; border: white;">Calcular Ganhos em potenciais</button>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+
+<script>
+function calcular(){
+    var perda = V2.value
+    var Vendas = V3.value;
+    var quantidade = V1.value;
+    var quantidadeD = (perda * 100) / quantidade;
+    var LucroP = (((100 - quantidadeD) - 15) / 100) + 1;
+    var LucroF = Vendas * LucroP
+    Exibir.innerHTML = `<span style="color: black;"> As empresas da indústria têxtil perdem cerca de <span style="color:red;">65%</span> da sua produção pela umidade. <br> A sua empresa perde cerca de <span style="color:red;">${quantidadeD.toFixed(1)}%</span> da sua produção por problemas no geral. <br>
+    Com os nosso serviços você irá lucrar até <span style="color:green;">R$${LucroF.toFixed(1)}! </span> </span> `;
+
+
+}
+</script>
