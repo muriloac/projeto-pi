@@ -6,7 +6,7 @@ nome varchar (40),
 empresa varchar (40),
 cnpj varchar (14),
 email varchar (40)
-) ENGINE = innodb;
+);
 
 create table Arduino (
 idArduino int primary key auto_increment,
@@ -15,7 +15,7 @@ FOREIGN KEY (idCliente)
 REFERENCES Clientes(idCliente) 
 on update cascade 
 on delete cascade
-) ENGINE = innodb;
+);
 
 insert into Clientes values	
 (null, 'José Carlos', 'R2PB Confecções', '45430719000109', 'r2pb@gmail.com'),
@@ -46,7 +46,7 @@ FOREIGN KEY (idArduino)
 REFERENCES Arduino(idArduino) 
 on update cascade
 on delete cascade
-) ENGINE = innodb;
+);
 
 insert into Dados values	
 (1, 1, '2020-01-01 12:12:12', '70.00%', '20°C'),
